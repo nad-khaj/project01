@@ -1,0 +1,238 @@
+
+/* global */
+
+:root{
+    --primaryColor: #ffcccc;
+    --primarysecondaryColor:#ffcccc;
+    --lightColor:#ffe6e6;
+    --secondaryLight: #ffb3b3;
+    --mainBlack:#222;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.2rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fira Code', monospace;
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* button */
+.btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    border: 2px solid var(--primarysecondaryColor);
+    color: var(--secondaryLight);
+    margin: 2rem;
+}
+
+.btn:hover{
+    background: var(--primarysecondaryColor);
+    color: var(--mainBlack);
+}
+
+/* navbar */
+
+.navbar{
+    background: linear-gradient(rgba(255,179,179),rgba(255,204,204)), var(--primaryColor);
+    padding: 0 2rem;
+}
+
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: var(--mainBlack);
+    font-size: 1.5rem;
+    display: block;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    letter-spacing: var(--mainSpacing);
+
+}
+.navbar a:hover{
+    color: var(--lightColor);
+}
+
+@media screen and (min-width:990px){
+    .navbar ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* main page with image */
+.text{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    background: url("/lucielle-jewel-eKY3r-ErHLA-unsplash.jpg")center/cover fixed no-repeat;
+    height: 100vh;
+    color: var(--mainBlack);
+    object-fit: cover;
+}
+
+/* collection  */
+
+.collection-title{
+    font-size: 1.5rem;
+    background: var(--lightColor);
+    color: var(--mainBlack);
+    text-align: center;
+}
+
+
+img{
+    width: 100%;
+}
+
+.img-card{    
+    border: 3px solid var(--secondaryLight);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr auto;
+    margin: 2rem 0;
+}
+.img-text{
+    padding: 1rem;
+}
+.img-footer{
+    background: var(--primarysecondaryColor);
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.collection-img{
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+    padding: 4rem 0;
+    margin: 1rem auto;
+    max-width: 1000px;
+    width: 80vw;
+}
+
+/* catagory */
+
+.main-catagory{
+   padding: 1rem 0;
+   background: linear-gradient(rgb(211, 197, 197),rgba(255,179,179), rgba(255,204,204)),var(--primaryColor);
+}
+.text-catagory{
+    font-size: 2rem;
+    text-align: center;
+}
+.catagory-img-list{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 2rem auto;
+    display: grid;
+    
+}
+
+@media screen and (min-width: 760px){
+    .catagory-img-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+    @media screen and (min-width: 992px){
+
+        .catagory-img-list{
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            grid-template-rows: repeat(5, 200px);
+            grid-template-areas: 
+            "a a a b"
+            "a a a c"
+            "d d d d"
+            "e f f f"
+            "e g h i";
+        }
+        img{
+            /* width: 100%; */
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        article{
+            border-radius: 10px;
+            box-shadow: 2px 4px 3px 5px rgba(0,0,0,.55);
+        }
+
+        .title-1{
+            grid-area: a;
+        }
+        .title-2{
+            grid-area: b;
+        }
+        .title-3{
+            grid-area: c;
+        }
+        .title-4{
+            grid-area: d;
+        }
+        .title-5{
+            grid-area: e;
+        }
+        .title-6{
+            grid-area: f;
+        }
+        .title-7{
+            grid-area: g;
+        }
+        .title-8{
+            grid-area: h;
+        }
+        .title-9{
+            grid-area: i;
+        }
+}
+
+/* search navbar */
+.navbar {
+    background: var(--lightColor);
+    color: var(--mainBlack);
+    font-size: 2rem;
+}
+.navbar a:hover{
+    color: var(--primarysecondaryColor);
+}
+
+.header-text{
+    width: 100%;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    
+}
+
+.text-1{
+    margin: 5rem 0;
+    width: 80vw;
+    display: grid;
+}
+.text-1 p{
+    text-align: center;
+    padding-left: 4rem;
+}
+
+
+
+
